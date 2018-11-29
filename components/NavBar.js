@@ -4,22 +4,21 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import { fade } from "@material-ui/core/styles/colorManipulator";
 import { withStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import Link from "next/link";
 
 const styles = theme => ({
   root: {
-    width: "100%"
+    width: "100%",
+    fontSize: "10px"
   },
   grow: {
     flexGrow: 1
@@ -29,15 +28,18 @@ const styles = theme => ({
   },
   title: {
     display: "none",
+
     [theme.breakpoints.up("sm")]: {
-      display: "block"
+      display: "block",
+      cursor: "pointer"
     }
   },
-  links : {
+  links: {
     marginRight: 20,
     display: "none",
     [theme.breakpoints.up("sm")]: {
-      display: "block"
+      display: "block",
+      cursor: "pointer"
     }
   },
   sectionDesktop: {
@@ -142,14 +144,17 @@ class NavBar extends React.Component {
                 <MenuIcon />
               </IconButton>
             </div>
-            <Typography
-              className={classes.title}
-              variant="h6"
-              color="inherit"
-              noWrap
-            >
-              Sherange.com
-            </Typography>
+            <Link href="/">
+              <Typography
+                className={classes.title}
+                variant="h6"
+                color="inherit"
+                noWrap={true}
+                gutterBottom={true}
+              >
+                Sherange.com
+              </Typography>
+            </Link>
             <div className={classes.grow} />
             <Typography variant="h6" color="inherit" className={classes.links}>
               About Me
@@ -174,8 +179,10 @@ class NavBar extends React.Component {
                 onClick={this.handleProfileMenuOpen}
                 color="inherit"
               >
-                <img src="/static/images/profile.jpg" style={{ height : "50px" , width : "50px", borderRadius : '50%'  }}></img>
-                {/* <AccountCircle  fontSize="large"/> */}
+                <img
+                  src="/static/images/profile.jpg"
+                  style={{ height: "50px", width: "50px", borderRadius: "50%" }}
+                />
               </IconButton>
             </div>
             <div className={classes.sectionMobile}>

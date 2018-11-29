@@ -23,6 +23,10 @@ class Footer extends React.Component {
           <Link href="/my-projects">
             <p className="text">My Projects</p>
           </Link>
+
+          <Link href="/my-projects">
+            <p className="text">My Posts</p>
+          </Link>
         </div>
         <div className="box-3">
           <p className="text">FaceBook</p>

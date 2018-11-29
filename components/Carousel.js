@@ -5,19 +5,30 @@ import "../styles/carousel.css";
 class Carousel extends React.Component {
   render() {
     return (
-      <OwlCarousel items={1} className="owl-theme" loop={true} center={true}>
-        <div className="item">
-          <img src="https://www.brindleyplace.com/wp-content/uploads/dummy-green-940.png" />
-        </div>
+      <section className="carousel-wrapper">
+        <OwlCarousel items={1} className="owl-theme" loop={true} center={true}>
+          <div className="item">
+            <img src="https://www.brindleyplace.com/wp-content/uploads/dummy-green-940.png" />
+          </div>
 
-        <div className="item">
-          <img src="https://www.brindleyplace.com/wp-content/uploads/dummy-green-940.png" />
-        </div>
+          <div className="item">
+            <img src="https://www.brindleyplace.com/wp-content/uploads/dummy-green-940.png" />
+          </div>
 
-        <div className="item">
-          <img src="https://www.brindleyplace.com/wp-content/uploads/dummy-green-940.png" />
-        </div>
-      </OwlCarousel>
+          <div className="item">
+            <img src="https://www.brindleyplace.com/wp-content/uploads/dummy-green-940.png" />
+          </div>
+        </OwlCarousel>
+        <style jsx>
+          {`
+         .carousel-wrapper {
+          flex : 1;
+          justify-content: center;
+          padding 1rem;
+        }
+        `}
+        </style>
+      </section>
     );
   }
 }

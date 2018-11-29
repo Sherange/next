@@ -11,8 +11,13 @@ const App = () => {
   return (
     <div className="container-1">
       <div className="box-1">
-        <AdSense.Google client="ca-pub-9051996071904477" />
         <NavBar />
+        <AdSense.Google
+          client="ca-pub-9051996071904477"
+          style={{ display: "block", height: "300px" }}
+          format="auto"
+          responsive="true"
+        />
       </div>
       <div className="box-2">
         {typeof window !== "undefined" ? <Carousel /> : null}

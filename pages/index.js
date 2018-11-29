@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import AdSense from "react-adsense";
 
 const Carousel = dynamic(() => import("../components/Carousel"), {
   ssr: false
@@ -10,6 +11,7 @@ const App = () => {
   return (
     <div className="container-1">
       <div className="box-1">
+        <AdSense.Google client="ca-pub-9051996071904477" />
         <NavBar />
       </div>
       <div className="box-2">

@@ -6,7 +6,6 @@ import flush from "styled-jsx/server";
 class MyDocument extends Document {
   render() {
     const { pageContext } = this.props;
-
     return (
       <html lang="en" dir="ltr">
         <Head>
@@ -36,13 +35,16 @@ class MyDocument extends Document {
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
             crossOrigin="anonymous"
           />
-
+          <script
+            async
+            src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          />
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" />
         </Head>
         <body
           style={{
             minHeight: "100vh",
-            minWidth : "50vw",
+            minWidth: "50vw",
             objectFit: "contain",
             boxSizing: "border-box",
             top: 0,
